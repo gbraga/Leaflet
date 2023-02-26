@@ -17,11 +17,14 @@
 </body>
 <script>
       var map = L.map(document.getElementById('mapDIV'), {
-      center: [-20.1438, -44.1301],
-      zoom: 15
+        center: [-20.1438, -44.1301],
+        zoom: 15
       });
-      var basemap = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-          });
-          basemap.addTo(map);
+
+      var basemap = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {  });
+      basemap.addTo(map);
+      
+      var earthquakeMarker = L.marker([-20.1438, -44.1301], { title: 'Janeiro 25, 2019 Desastre de Brumadinho' });
+      earthquakeMarker.addTo(map);
 </script>
 </html>
