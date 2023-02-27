@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <head>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-  crossorigin=""/>  
-  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-  crossorigin=""></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" crossorigin=""/>  
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" crossorigin=""></script>
+  <script src="area_afetada.geojson"></script>
   <style>
       #mapDIV{
           height: 700px;
@@ -27,5 +26,17 @@
       var earthquakeMarker = L.marker([-20.1438, -44.1301], { title: 'Janeiro 25, 2019 Desastre de Brumadinho' });
       earthquakeMarker.bindPopup("Janeiro 25, 2019 Desastre de Brumadinho");
       earthquakeMarker.addTo(map);
+
+      
+      var trail = L.geoJSON(trail);
+      trail.addTo(map);
+
+      var thetrail = L.geoJSON(trail, {
+          color: '#800000',
+          weight: 3,
+          dashArray: '12 8 12',
+      });
+
+      thetrail.bindTooltip('Trilha de Brumadinho');
 </script>
 </html>

@@ -1,0 +1,1 @@
+http://200.198.23.93:80/geoserver/prodemge/ows?service=WFS&version=1.0.0&request=GetFeature&maxFeatures=99999999&typeName=prodemge:IN_POL_BRUMADINHO_AREA_AFETADA&outputFormat=SHAPE-ZIP
